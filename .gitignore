@@ -1,0 +1,5 @@
+log/
+venv/
+data/
+test_data/
+.idea/
