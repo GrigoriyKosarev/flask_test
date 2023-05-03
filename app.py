@@ -1,16 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 from markupsafe import escape
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Hello World'
-
-@app.route('/<name>')
-def hello(name):
-    return f"Hello {escape(name)}"
-
+def index():
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
